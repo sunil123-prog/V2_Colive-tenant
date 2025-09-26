@@ -13,6 +13,7 @@ import { AppColors } from "../styles/colors";
 import { Ionicons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 import AppButton from "../components/buttons/AppButton";
+import { AppFonts } from "../styles/fonts";
 
 const TermsScreen = () => {
   const navigation = useNavigation();
@@ -161,6 +162,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: s(20),
     fontWeight: "700",
+    fontFamily: AppFonts.Bold,
     marginBottom: vs(20),
     color: AppColors.primary,
   },
@@ -169,6 +171,7 @@ const styles = StyleSheet.create({
   },
   sectionTitle: {
     fontSize: s(16),
+    fontFamily: AppFonts.Bold,
     fontWeight: "700",
     marginBottom: vs(5),
     color: AppColors.black,
@@ -176,17 +179,22 @@ const styles = StyleSheet.create({
   point: {
     fontSize: s(14),
     marginBottom: vs(3),
+    fontFamily: AppFonts.Medium,
     color: AppColors.medGray,
   },
   subPoint: {
     fontSize: s(13),
     marginLeft: s(10),
     marginBottom: vs(3),
+    fontFamily: AppFonts.Medium,
+
     color: AppColors.medGray,
   },
   warning: {
     fontSize: s(13),
     color: AppColors.warning,
+    fontFamily: AppFonts.Medium,
+
     marginBottom: vs(3),
   },
   checkboxContainer: {
@@ -198,6 +206,8 @@ const styles = StyleSheet.create({
     marginLeft: s(10),
     fontSize: s(14),
     color: AppColors.black,
+    fontFamily: AppFonts.Bold,
+
     flex: 1,
   },
 });

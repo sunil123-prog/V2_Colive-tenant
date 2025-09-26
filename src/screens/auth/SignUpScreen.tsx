@@ -88,7 +88,7 @@ const SignUpScreen = () => {
         if (!form.permanentAddress) newErrors.permanentAddress = "Permanent Address is required";
         if (!form.educationQualification) newErrors.educationQualification = "Education Qualification is required";
         if (!form.confirmPassword) newErrors.confirmPassword = "Confirm Password is required";
-        if (!form.aadharFile) newErrors.aadharFile = "Aadhar File is required";
+        // if (!form.aadharFile) newErrors.aadharFile = "Aadhar File is required";
 
 
 
@@ -306,9 +306,9 @@ const SignUpScreen = () => {
                 : "Upload Aadhar"}
             </Text>
           </TouchableOpacity>
-          {errors.aadharFile && (
+          {/* {errors.aadharFile && (
             <Text style={styles.errorText}>{errors.aadharFile}</Text>
-          )}
+          )} */}
 
           <AppTextInput
             placeholder="Password"
