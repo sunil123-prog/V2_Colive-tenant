@@ -8,11 +8,14 @@ export default function MainAppStack() {
     return(
         <Stack.Navigator
          screenOptions={{
-            headerShown: false
+            headerShown: false,
+            gestureEnabled: false
          }}
         >
             <Stack.Screen name="AuthStack" component={AuthStack} />
-            <Stack.Screen name="MainAppBottomTabs" component={MainAppBottomTabs} />
+            <Stack.Screen name="MainAppBottomTabs" component={MainAppBottomTabs}
+            options={{ gestureEnabled: false }}
+             />
         </Stack.Navigator>
     )
 }

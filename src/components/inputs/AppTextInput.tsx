@@ -4,6 +4,7 @@ import {
   StyleSheet,
   TextStyle,
   StyleProp,
+  TextInputProps,
 } from "react-native";
 import { AppColors } from "../../styles/colors";
 import { vs, s } from "react-native-size-matters";
@@ -15,6 +16,7 @@ interface AppTextInputProps {
   secureTextEntry?: boolean;
   keyboardType?: "default" | "email-address" | "numeric";
   style?: StyleProp<TextStyle>;
+  editable?: boolean;   // ✅ add editable prop
 }
 
 const AppTextInput: FC<AppTextInputProps> = ({
@@ -24,6 +26,7 @@ const AppTextInput: FC<AppTextInputProps> = ({
   secureTextEntry = false,
   keyboardType = "default",
   style,
+  editable = true, // ✅ default true
 }) => {
   return (
     <TextInput
@@ -32,6 +35,7 @@ const AppTextInput: FC<AppTextInputProps> = ({
       placeholder={placeholder}
       secureTextEntry={secureTextEntry}
       keyboardType={keyboardType}
+      editable={editable}   // ✅ pass to TextInput
       style={[styles.input, style]}
     />
   );
